@@ -1,17 +1,36 @@
-access_token = .token = '38534a3e930c2b90b944a91fa891366714ac7684'
+install.packages("gh")
+access_token = .token = '?????????'
+Sys.setenv(GITHUB_PAT = "?????????") #set access token as a system variable 
 
-gh("/users/reillyp6/repos")
-gh("/users/:username/repos", username = "reillyp6", .token = token)
+gh_whoami()
 
-users <- gh("/users", .limit = 20) #get first 20 users (ie. User ID's 1-20)
 
-users #print user information
 
-get_repos <- gh("/users/:username/repos", username = "reillyp6") #store all repos of selected user
+initial_user = "phadej" #select an initial user
+all_repos = gh("https://api.github.com/users/:username/repos",
+               username = initial_user,
+               .token =access_token, .limit=1000) #get all repos of selected user
+n = length(all_repos) 
 
-?vapply
+name= c() #create vectors to store data
+lang= c()
+size= c()
 
-vapply(get_repos,"[[", "","name") #print name of all of selected users repos
+for(i in 1:n) #run for loop to get name, language and size of all user repositories
+{
+  if(is.null(all_repos[[i]]$language))
+  {
+    
+  }
+  else
+  {
+    name[i]=all_repos[[i]]$name 
+    lang[i]=all_repos[[i]]$language
+    size[i]=all_repos[[i]]$size
+  }
+}
 
-get_repos #print all info re selected user's repos
+
+df_phadej = data.frame(name, lang, size) #save all data to a dataframe object
+
 
