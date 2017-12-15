@@ -1,6 +1,6 @@
 install.packages("gh")
-access_token = .token = '??????????'
-Sys.setenv(GITHUB_PAT = "??????????") #set access token as a system variable 
+access_token = .token = 'c59197c234b80be3f67996d2af2a0d9411df5373'
+Sys.setenv(GITHUB_PAT = "c59197c234b80be3f67996d2af2a0d9411df5373") #set access token as a system variable 
 
 gh_whoami()
 
