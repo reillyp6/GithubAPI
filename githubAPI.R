@@ -11,7 +11,8 @@ gh_whoami()
 #the frequency of occurrence of each language and and creates a new dataframe,
 #in which is stored all languages that have a frequency over "n_freq",
 #a user selected level of significance, and also the total KB of all repositories
-#in that language
+#in that language. The program then calculates and plots the average size of a repository
+#per language.
 
 #large dataset, initial user= "phadej", suggested n_freq=400
 #stores ~13,000 repos, runtime~ 6m 30s

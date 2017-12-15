@@ -1,7 +1,7 @@
 install.packages("plotly")
 library(plotly)
 
-#large data visualisation
+#Large Data Visualisation
 
 trace1 <- list(
   x = c("C", "C++", "Haskell", "HTML", "JavaScript", "Python", "Ruby"), 
@@ -27,17 +27,17 @@ layout <- list(
   boxmode = "group", 
   hovermode = "closest", 
   ternary = list(aaxis = list(title = "")), 
-  title = "Average size in KB of repositories across a number of languages", 
+  title = "Average size in KB of repositories across a number of languages (large data-set)", 
   xaxis = list(
     autorange = TRUE, 
     range = c(-0.5, 6.5), 
-    title = "average_size", 
+    title = "Programming Language", 
     type = "category"
   ), 
   yaxis = list(
     autorange = TRUE, 
     range = c(0, 54685.0560429), 
-    title = "average_size", 
+    title = "Average size of Repository", 
     type = "linear"
   )
 )
@@ -45,8 +45,9 @@ p <- plot_ly()
 p <- add_trace(p, x=trace1$x, y=trace1$y, marker=trace1$marker, name=trace1$name, text=trace1$text, textsrc=trace1$textsrc, type=trace1$type, uid=trace1$uid, xcalendar=trace1$xcalendar, xsrc=trace1$xsrc, ysrc=trace1$ysrc)
 p <- layout(p, autosize=layout$autosize, boxmode=layout$boxmode, hovermode=layout$hovermode, ternary=layout$ternary, title=layout$title, xaxis=layout$xaxis, yaxis=layout$yaxis)
 
-#Medium data visualisation
+#Medium Data Visualiasation
 
+library(plotly)
 trace1 <- list(
   x = c("C", "CSS", "HTML", "Java", "JavaScript", "Objective-C", "Python", "R", "Ruby"), 
   y = c("24683.6036036036", "19450.8611111111", "28819.3945945946", "40631.4106280193", "16206.3790426908", "31141.9115044248", "10264.5115207373", "22247", "4446.20353982301"), 
@@ -63,13 +64,13 @@ layout <- list(
   xaxis = list(
     autorange = TRUE, 
     range = c(-0.5, 8.5), 
-    title = "lang", 
+    title = "Programming Language", 
     type = "category"
   ), 
   yaxis = list(
     autorange = TRUE, 
     range = c(0, 42769.9059242), 
-    title = "average_size", 
+    title = "Average size of Repository", 
     type = "linear"
   )
 )
@@ -77,8 +78,9 @@ p <- plot_ly()
 p <- add_trace(p, x=trace1$x, y=trace1$y, name=trace1$name, type=trace1$type, uid=trace1$uid, xsrc=trace1$xsrc, ysrc=trace1$ysrc)
 p <- layout(p, hovermode=layout$hovermode, title=layout$title, xaxis=layout$xaxis, yaxis=layout$yaxis)
 
-#Small data visualisation
+#Small Data Visualisation
 
+library(plotly)
 trace1 <- list(
   x = c("C", "C++", "Java", "JavaScript", "Python"), 
   y = c("337478", "395288", "781245", "325042", "753430"), 
@@ -95,13 +97,13 @@ layout <- list(
   xaxis = list(
     autorange = TRUE, 
     range = c(-0.5, 4.5), 
-    title = "lang", 
+    title = "Programming Language", 
     type = "category"
   ), 
   yaxis = list(
     autorange = TRUE, 
     range = c(0, 822363.157895), 
-    title = "total_kb", 
+    title = "Average Size of Repository", 
     type = "linear"
   )
 )
