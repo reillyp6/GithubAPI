@@ -1,4 +1,7 @@
 # GithubAPI
+
+Philip Reilly: ID 15318396
+
 Interrogate github API to retrieve and display data.
 
 This program will take an initial username, access all of their repositories, all the repositories of all their followers, and store in a dataframe object: the name of each repository, the programming language corresponding to each repository (if not = NULL), and size in KB of each repository.
